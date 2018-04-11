@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/medium"
+        android:textAppearance="@style/PlayBar"
+        android:text="@string/playlist"
+        android:id="@+id/playlist_textView"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/medium"
+        android:layout_below="@id/playlist_textView"
+        android:layout_above="@id/now_playing_linearLayout"
+        android:id="@+id/track_list">
+
+    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/medium"
+        android:id="@+id/now_playing_linearLayout">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_margin="@dimen/small"
+            android:textAppearance="@style/PlayBar"
+            android:text="@string/now_playing"
+            android:id="@+id/now_playing_textView"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/previous"
+            android:layout_margin="@dimen/small"
+            android:textAppearance="@style/PlayBar"
+            android:id="@+id/previous_textView"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pause"
+            android:layout_margin="@dimen/small"
+            android:textAppearance="@style/PlayBar"
+            android:id="@+id/pause_textView"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:layout_margin="@dimen/small"
+            android:textAppearance="@style/PlayBar"
+            android:id="@+id/next_textView"/>
+    </LinearLayout>
+
+</RelativeLayout>
