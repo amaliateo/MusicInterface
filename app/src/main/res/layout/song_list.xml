@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
     android:orientation="horizontal">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/small"
-    android:textAppearance="@style/SongTitles"
-    android:id="@+id/song_title_textView"
-    />
+
     <TextView
+        android:id="@+id/artist_name_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/small"
-        android:textAppearance="@style/SongTitles"
-        android:id="@+id/song_duration_textView"/>
-</LinearLayout>
+        android:text="@string/artist_name"
+        android:textAppearance="@style/SongTitles" />
+
+    <TextView
+        android:id="@+id/song_title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/artist_name_textView"
+        android:layout_marginBottom="@dimen/small"
+        android:layout_marginLeft="@dimen/small"
+        android:layout_marginRight="@dimen/small"
+        android:text="@string/song_title"
+        android:textAppearance="@style/SongTitles" />
+
+    <ImageButton
+        android:id="@+id/maximize_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/medium"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/opens_the_details_activity_for_each_song"
+        android:src="@drawable/rsz_expand_button" />
+
+</RelativeLayout>

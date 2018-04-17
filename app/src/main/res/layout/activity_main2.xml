@@ -1,9 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main2Activity">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/center_image"
+        android:src="@drawable/rsz_center_image"
+        android:id="@+id/center_image_ImageView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Song_Title"
+        android:layout_below="@id/center_image_ImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/medium"
+        android:id="@+id/song_title_textViewTwo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Artist_Name"
+        android:layout_margin="@dimen/medium"
+        android:layout_below="@id/song_title_textViewTwo"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/artist_name_textViewTwo"/>
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/artist_name_textViewTwo"
+
+        android:min="0"
+        android:max="100"
+        android:id="@+id/seek_bar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seek_bar"
+        android:layout_toStartOf="@id/pause_textViewTwo"
+        android:layout_toLeftOf="@id/pause_textViewTwo"
+        android:layout_margin="@dimen/large"
+        android:text="@string/start_over"
+        android:id="@+id/previous_textViewTwo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seek_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/large"
+        android:text="@string/pause"
+        android:id="@+id/pause_textViewTwo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seek_bar"
+        android:layout_toRightOf="@id/pause_textViewTwo"
+        android:layout_toEndOf="@id/pause_textViewTwo"
+        android:layout_margin="@dimen/large"
+        android:text="@string/repeat"
+        android:id="@+id/next_textView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/large"
+        android:id="@+id/back_textView"/>
+</RelativeLayout>
