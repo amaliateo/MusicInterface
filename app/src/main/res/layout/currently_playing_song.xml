@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CurrentlyPlayingSong">
+
+    <ImageView
+        android:id="@+id/center_image_ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/small"
+        android:contentDescription="@string/center_image"
+        android:src="@drawable/rsz_center_image" />
+
+    <TextView
+        android:id="@+id/song_title_textViewTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/center_image_ImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/medium"
+        android:text="@string/Song_Title"
+        android:textAppearance="@style/NowPlaying"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/artist_name_textViewTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song_title_textViewTwo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/large"
+        android:text="@string/Artist_Name"
+        android:textAppearance="@style/NowPlaying" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/seek_bar"
+        android:layout_marginLeft="@dimen/small"
+        android:layout_marginStart="@dimen/small"
+        android:text="@string/time_start" />
+
+    <TextView
+        android:id="@+id/song_duration_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/seek_bar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/small"
+        android:layout_marginRight="@dimen/small" />
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/artist_name_textViewTwo"
+        android:layout_marginEnd="@dimen/small"
+        android:layout_marginLeft="@dimen/small"
+        android:layout_marginRight="@dimen/small"
+        android:layout_marginStart="@dimen/small"
+        android:indeterminateBehavior="repeat" />
+
+    <TextView
+        android:id="@+id/back_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/large"
+        android:text="@string/back"
+        android:textAppearance="@style/backButton" />
+</RelativeLayout>
